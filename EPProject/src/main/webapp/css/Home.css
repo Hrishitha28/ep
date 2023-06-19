@@ -1,0 +1,124 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 845px;
+}
+
+.u-section-1 .u-group-1 {
+  width: 487px;
+  min-height: 369px;
+  height: auto;
+  margin: 183px auto 0 50px;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 30px 7px;
+}
+
+.u-section-1 .u-text-1 {
+  width: 215px;
+  margin: 9px auto 0;
+}
+
+.u-section-1 .u-image-1 {
+  width: 183px;
+  height: 183px;
+  margin: 11px 17px 0 auto;
+}
+
+.u-section-1 .u-text-2 {
+  margin: -124px 241px 0 17px;
+}
+
+.u-section-1 .u-btn-1 {
+  background-image: linear-gradient(to right, #478ac9, #e68387);
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0px;
+  margin: 72px auto 0 129px;
+  padding: 9px 22px;
+}
+
+.u-section-1 .u-group-2 {
+  width: 487px;
+  min-height: 369px;
+  height: auto;
+  margin: -369px 40px 60px auto;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 30px;
+}
+
+.u-section-1 .u-text-3 {
+  width: 204px;
+  margin: 0 auto;
+}
+
+.u-section-1 .u-image-2 {
+  width: 171px;
+  height: 174px;
+  margin: 26px 17px 0 auto;
+}
+
+.u-section-1 .u-text-4 {
+  margin: -110px 210px 0 9px;
+}
+
+.u-section-1 .u-btn-2 {
+  background-image: linear-gradient(to right, #478ac9, #e68387);
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0px;
+  margin: 63px auto 0 98px;
+  padding: 9px 22px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-group-1 {
+    height: auto;
+  }
+
+  .u-section-1 .u-group-2 {
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-group-1 {
+    width: 340px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-right: 111px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-group-2 {
+    width: 340px;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-4 {
+    margin-right: 72px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-left: 0;
+  }
+}

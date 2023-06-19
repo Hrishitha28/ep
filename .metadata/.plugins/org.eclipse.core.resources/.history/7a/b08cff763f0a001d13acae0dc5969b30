@@ -1,0 +1,69 @@
+package com.klef.ep.services;
+
+import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
+import javax.faces.bean.ManagedBean;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import com.klef.ep.models.Contest;
+import com.klef.ep.models.Questionnaire;
+
+@Stateless
+@TransactionManagement(TransactionManagementType.BEAN)
+public class QuestionnaireServiceImpl implements QuestionnaireService
+{
+	public String addQuestionnaire(Questionnaire q) {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("qms");
+	    EntityManager entityManager = entityManagerFactory.createEntityManager();
+	    entityManager.getTransaction().begin();
+	    entityManager.persist(q);
+	    entityManager.getTransaction().commit();
+	    
+	    entityManager.close();
+	    entityManagerFactory.close();
+	    
+	    return "AddQuestionnaire.jsp?faces-redirect=true";
+	}
+
+	public List<Questionnaire> viewallQuestions() {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("qms");
+	    EntityManager entityManager = entityManagerFactory.createEntityManager();
+	    
+	    
+	    entityManager.getTransaction().begin();
+	    Query qry=entityManager.createQuery("select q from Questionnaire q");
+	    List<Questionnaire> questionlist=qry.getResultList();
+	    entityManager.getTransaction().commit();
+	    
+	    entityManager.close();
+	    entityManagerFactory.close();
+	    
+	    return questionlist;
+	}
+	
+	public String deleteQuestions(int q_id) 
+	{
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("qms");
+	    EntityManager entityManager = entityManagerFactory.createEntityManager();
+	    
+	    
+	    entityManager.getTransaction().begin();
+	    Questionnaire e=entityManager.find(Questionnaire.class,q_id);
+	    entityManager.remove(e);
+	    entityManager.getTransaction().commit();
+	    
+	    entityManager.close();
+	    entityManagerFactory.close();
+	    
+	    return "Contest deleted Successfully";
+		
+	}
+
+
+}

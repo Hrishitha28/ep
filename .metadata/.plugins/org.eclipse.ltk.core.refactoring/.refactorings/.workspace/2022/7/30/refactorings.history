@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;EPFinalProject&apos; to &apos;EPProject&apos;" description="Rename resource &apos;EPFinalProject&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/EPFinalProject" name="EPProject" stamp="1658552383265" updateReferences="true"/>
+</session>

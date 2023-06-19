@@ -1,0 +1,47 @@
+package com.klef.ep.models;
+
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+
+import com.klef.ep.services.AdminService;
+
+@ManagedBean(name = "adminBean",eager = true)
+public class AdminBean {
+		public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+		private int id;
+		private String pwd;
+		private String response;
+		
+		public String getResponse() {
+			return response;
+		}
+		public void setResponse(String response) {
+			this.response = response;
+		}
+		@EJB(lookup = "java:global/EPProject/AdminServiceImpl!com.klef.ep.services.AdminService")
+		AdminService adminService;
+		
+		public String checklogin()
+		{
+			try
+			{
+				response=adminService.checklogin(id, pwd);
+			}
+			catch(Exception e)
+			{
+				response=e.getMessage();
+			}
+			return "index.jsf?faces-redirect=true";
+		}
+}
